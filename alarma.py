@@ -10,7 +10,8 @@ import tkinter
 #importamos tkinter... no ponemos nada de as tk
 
 from tkinter import filedialog
-
+def funcion_cualquiera():
+    print("ejecutado.... funcion cualquiera")
 
 def run():
 
@@ -31,11 +32,11 @@ def run():
     # pack admite diferentes parametros 
     etiqueta.pack(side = tkinter.TOP, fill = tkinter.X)# asi podemos hacer que la etiqueta se "alarge"
    
-    boton1 =tkinter.Button(ventana, text = "guardar")
+    boton1 =tkinter.Button(ventana, text = "ejecutar funcion", command = funcion_cualquiera)
     boton1.pack()
    
    
-   
+    
    
    
     ventana.mainloop()#emepzamos a ejecutar un hilo queeste en loop monitoreando la ventana
