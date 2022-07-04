@@ -12,6 +12,8 @@ import tkinter
 from tkinter import filedialog
 def funcion_cualquiera(nombre):
     print("ejecutado.... funcion cualquiera" + nombre)
+    
+
 
 def run():
 
@@ -32,11 +34,16 @@ def run():
     # pack admite diferentes parametros 
     etiqueta.pack(side = tkinter.TOP, fill = tkinter.X)# asi podemos hacer que la etiqueta se "alarge"
    
-    boton1 =tkinter.Button(ventana, text = "ejecutar funcion", command = lambda: funcion_cualquiera("Marcelo"))
-    boton1.pack()
-   
-   
     
+    
+    entrada_texto = tkinter.Entry(ventana, font = "Helvetica 20")
+    entrada_texto.pack()
+    def obtener_texto():
+        contenido = entrada_texto.get()
+        print(contenido)
+   
+    boton1 =tkinter.Button(ventana, text = "ejecutar funcion", command = lambda: obtener_texto())
+    boton1.pack()
    
    
     ventana.mainloop()#emepzamos a ejecutar un hilo queeste en loop monitoreando la ventana
