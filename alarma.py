@@ -42,7 +42,7 @@ def run():
         contenido = entrada_texto.get()
         print(contenido)
    
-    boton1 =tkinter.Button(ventana, text = "ejecutar funcion", command = lambda: obtener_texto())
+    boton1 =tkinter.Button(ventana, text = "ejecutar funcion", command = lambda: funcion_cualquiera(entrada_texto.get()))
     boton1.pack()
    
    
